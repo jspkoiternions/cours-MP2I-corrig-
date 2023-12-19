@@ -53,23 +53,8 @@ int queue_dequeue(queue *q int x){
 
 /*--------------------------------*/
 /*
-typedef struct Cell {int value, struct Cell *next} list;
+la suite est analogue mais je n'ai pas eu le tps de l'écire*/
 
-list *ajout(int x, list *n){
-    list *l = malloc(sizeof(struct Cell));
-    l-> value = x;
-    l -> value = n;
-    return c;
-  }
-
-
-typedef struct Cell {int size, list * first, last} list;
-
-queue *queue_create(){
-  queue *q = malloc(sizeof(struct Queue));
-  
-}
-*/
 int main(){
   return 0;
 }
