@@ -1,0 +1,12 @@
+Entrée : liste
+Sortie : Vrai si liste = cyclique, Faux sinon
+
+Lievre = liste -> next -> next 
+Tortue = liste -> next
+
+tant que (Lievre !=NULL et Lievre != Tortue);
+	Lievre = Lievre -> next 
+	si Lievre != NULL : 
+		Lievre -> next
+	Tortue -> next 
+renvoyer (Tortue == Lievre)
