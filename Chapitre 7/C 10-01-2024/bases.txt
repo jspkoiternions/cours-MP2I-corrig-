@@ -92,11 +92,42 @@ sur 32 bits :
  - 8 bits pour l'exposant (prend une valeur entre 0 = 00000000 et 255 = 11111111)
  - 23 bits pour la mantisse (cf cours ecriture dyadique)
 
-mantisse 
+1 ) 
+mantisse :
 1,75    = 1 + 0,5 + 0,25
 	= 1*2^0+ 1*2^-1 + 1*2^-2
 	= 1,11 en base 2
-représentation en mémoire : 1100...00 
-			      { x21  }	
+représentation en mémoire de la mantisse : 1100...00 
+					    {  x21  }
 
 
+exemples : 
+
+s = 1 : (-1)^s = -1
+n = 2+8+16+64 = 90
+n-d = 90-17 = -37
+
+m = 1+f avec f  = 2^-1 + 2^-2 + 2^-5
+		= 0,5 + 0,25 + 0,03125
+		= 0,78125
+
+f = 1,78125
+le nombre représenté vaut alors : 
+ -1,78125*2^-37
+
+2 ) 
+s=0 : (-1)^s = 1
+
+n = 128+2+1 = 131
+
+n-d = 4
+
+m = 1+f avec f  = 2^-2 + 2^-3
+		= 0,25 + 0,125
+		= 0,375
+
+m = 1,375
+
+Le nombre représenté vaut : 1,375*2^4
+
+On peut faire de même et gagner en précision sur 64 bits
