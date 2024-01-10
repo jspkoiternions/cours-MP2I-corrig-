@@ -1,0 +1,18 @@
+existence et unicité de l'écriture dans une base à une séquence de 0 près
+les bases utilisées en informatique sont l'hexa le binaire et la base 10
+
+intéret de la base 2 : une information est réprésentée en séquence binaire on peut alors stocker les informations en binaire
+
+l'hexa et l'ocatl sont des transformation de la réprésentation binaire avec plus ou moins de chiffres
+
+
+sur N bits on peut représenter 2^N (on peut écrire les entiers de 0 à 2^(n-1) )
+ex :  sur 8 bits on peut représenter les entiers jusqu'à 255
+
+gros  boutisme: on place en premier le bit de poids fort (comme écriture standare de droite à gauche)
+petit boutisme: on place en premier le bit de poids faible
+
+Les boutismes sont en général gérés par le sys d'exploitation.
+
+Exemple :
+sur 4 bits : calcul de 10+7
