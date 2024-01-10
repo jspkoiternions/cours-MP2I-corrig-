@@ -6,7 +6,7 @@ intéret de la base 2 : une information est réprésentée en séquence binaire 
 l'hexa et l'ocatl sont des transformation de la réprésentation binaire avec plus ou moins de chiffres
 
 
-sur N bits on peut représenter 2^N (on peut écrire les entiers de 0 à 2^(n-1) )
+sur n bits on peut représenter 2^n (on peut écrire les entiers de 0 à 2^(n-1) )
 ex :  sur 8 bits on peut représenter les entiers jusqu'à 255
 
 gros  boutisme: on place en premier le bit de poids fort (comme écriture standare de droite à gauche)
@@ -28,3 +28,27 @@ Il y a plusieurs façons de réprésenter les entiers relatifs (cf cours)
 
 1010 = + 2
 0101 = - 5
+
+pose 2 problèmes :
+	- Le nombre 0 a deux représentations 
+	- L'addition d'entiers de même signe ne peut se faire de façon aussi simple sur Z que sur N.
+
+
+Pour palier à cela on utilise le complément à 2 :
+
+0  =0000 -> 0
+1  =0001 -> 1
+2  =0010 -> 2
+3  =0011 -> 3
+4  =0100 -> 4
+5  =0101 -> 5
+6  =0110 -> 6
+7  =0111 -> 7
+8  =1000 -> -8
+9  =1001 -> -7
+10 =1010 -> -6
+11 =1011 -> -5
+12 =1100 -> -4
+13 =1101 -> -3
+14 =1110 -> -2
+15 =1111 -> -1
