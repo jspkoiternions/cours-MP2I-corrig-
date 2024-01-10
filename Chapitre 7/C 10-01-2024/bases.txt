@@ -70,3 +70,5 @@ on a bien une somme nul car on est sur 4 bits
 
 
 # Représentation Approximative des réels :
+
+Nombres dyadiques sont les nombres admettants une écriture à virgule finie en base 2.
