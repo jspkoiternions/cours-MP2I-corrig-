@@ -155,3 +155,8 @@ quand on dépasse 2 , la diff minimal entre 1 et 2 est plus petit que la diff mi
  * * * * * * * * * * * * *
 |--------|-------|-------|
 
+1*2^0 | 1+2^-13)*2^0 = 1,000...01
+
+2+2^-23 = (1+2^-24)*2^1
+
+on aurai besoin de 24 chiffre après la virgule alors qu'on est limité à seulement 23 chiffres après la virgule due à la mantisse
