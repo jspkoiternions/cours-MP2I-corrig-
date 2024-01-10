@@ -143,4 +143,10 @@ autres valeurs :
 +infini est représenté par un signe 0, un exposant 255 et une mantisse 0
 -infini est représenté par un signe 1, un exposant 255 et une mantisse 0
 
+format : 
 
+base 2 = base 10 :
+1,00 = 1
+1,01 = 1,25
+1,10 = 1,5
+1,11 = 1,75
