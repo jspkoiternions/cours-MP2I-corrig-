@@ -131,3 +131,16 @@ m = 1,375
 Le nombre représenté vaut : 1,375*2^4
 
 On peut faire de même et gagner en précision sur 64 bits
+
+## Valeurs spéciales :
+NaN (not a number) qui réprésente de opérations non définies : sqrt(-1) ou 0/0
+
+NaN est représenté par un signe 0, un exposant 255 et une mantisse 0 != 0
+
+autres valeurs :
++0 est représenté par un signe 0, un exposant 0 et une mantisse 0
+-0 est représenté par un signe 1, un exposant 0 et une mantisse 0
++infini est représenté par un signe 0, un exposant 255 et une mantisse 0
+-infini est représenté par un signe 1, un exposant 255 et une mantisse 0
+
+
