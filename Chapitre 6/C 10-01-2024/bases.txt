@@ -16,3 +16,15 @@ Les boutismes sont en général gérés par le sys d'exploitation.
 
 Exemple :
 sur 4 bits : calcul de 10+7
+
+	1110
+	 1010
+	+0111
+	-------
+	1|0001          = 1 car on est sur 4 bits
+
+
+Il y a plusieurs façons de réprésenter les entiers relatifs (cf cours)
+
+1010 = + 2
+0101 = - 5
