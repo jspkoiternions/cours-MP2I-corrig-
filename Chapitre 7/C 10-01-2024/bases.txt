@@ -52,3 +52,21 @@ Pour palier à cela on utilise le complément à 2 :
 13 =1101 -> -3
 14 =1110 -> -2
 15 =1111 -> -1
+
+on appel les entiers relatifs -> signés 
+et les naturels -> non signés
+
+exemple de représentations 
+-5 -> 1011
+5  -> 0101 
+
+et en faisant la somme,   111
+			  1011
+			+ 0101
+			--------
+			1;0000
+
+on a bien une somme nul car on est sur 4 bits
+
+
+# Représentation Approximative des réels :
