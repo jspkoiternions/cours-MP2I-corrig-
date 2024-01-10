@@ -1,3 +1,15 @@
+88          88                                                
+88          ""                                                
+88                                                            
+88,dPPYba,  88 8b,dPPYba,  ,adPPYYba, 8b,dPPYba, 8b       d8  
+88P'    "8a 88 88P'   `"8a ""     `Y8 88P'   "Y8 `8b     d8'  
+88       d8 88 88       88 ,adPPPPP88 88          `8b   d8'   
+88b,   ,a8" 88 88       88 88,    ,88 88           `8b,d8'    
+8Y"Ybbd8"'  88 88       88 `"8bbdP"Y8 88             Y88'     
+                                                     d8'      
+                                                    d8'       
+
+
 existence et unicité de l'écriture dans une base à une séquence de 0 près
 les bases utilisées en informatique sont l'hexa le binaire et la base 10
 
@@ -72,3 +84,19 @@ on a bien une somme nul car on est sur 4 bits
 # Représentation Approximative des réels :
 
 Nombres dyadiques sont les nombres admettants une écriture à virgule finie en base 2.
+
+
+## Représentation en mémoire
+sur 32 bits :
+ - 1 bit pour le signe (0 pour + et 1 pour -)
+ - 8 bits pour l'exposant (prend une valeur entre 0 = 00000000 et 255 = 11111111)
+ - 23 bits pour la mantisse (cf cours ecriture dyadique)
+
+mantisse 
+1,75    = 1 + 0,5 + 0,25
+	= 1*2^0+ 1*2^-1 + 1*2^-2
+	= 1,11 en base 2
+représentation en mémoire : 1100...00 
+			      { x21  }	
+
+
