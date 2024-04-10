@@ -74,7 +74,26 @@ let rec simplif_quine f =
   | Ou(f1,f2) -> if(simplif_quine f1 = f1 && simplif_quine f2 = f2) then Ou(f1,f2) else simplif_quine (Ou (simplif_quine f1), (simplif_quine f2))
   | Neg(f1) ->  if(simplif_quine f1 = f1) then Neg(f1) else simplif_quine (Neg (simplif_quine f1)) ;;
 
+type 'a arbre_quine =
+| Valide
+| Invalide
+| Noeud of 'a * 'a arbre_quine * 'a arbre_quine
+;;
 
+let arbre f =
+  let f_bis = simplif_quine f in
+  match f_bis with
+  | Vrai -> Valide
+  | Faux -> Invalide
+  | _ -> let var = variables f_bis in
+        let (t::s) = var in
+        let f1 = simplif_quine (subsitution f t true) in
+        let f2 = simplif_quine (subsitution f t false) in
+        Noeud(t,arbre f1,arbre f2) ;;
+        
+type 'a lit = V of 'a  | N of 'a ;;
+
+type 'a cnf 'a lit list list;;
 
  
 
