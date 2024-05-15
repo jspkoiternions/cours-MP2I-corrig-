@@ -22,7 +22,7 @@ fonction :
 - renvoie la solution attendue ET la stocke dans le structure  pour être réutilisée dans les appels récursifs
 
 ### Exemples :
-
+1)
 ```ocaml
 let rec fibo_top_down_aux n t = 
   (if n <= 1 then t.(n) <- n 
@@ -37,3 +37,18 @@ let fibo_top_down n = fibo_top_down_aux n (Array.make(n+1) 0);;
 ```
 
 on appel cela la mémoïsation le fait de se rappeler des résultats déja calculés
+
+2)
+Plus longue sous séquence commune
+```ocaml
+let rec plssc s1 s2 l1 l2 mat_longueur =
+if l1 = 0 || l2 = 0 
+  then (mat_longueur.(l1).(l2) <- 0)
+else 
+    (if mat_longueur.(l1).(l2) = -1 then 
+  if s1 .[l1-1] = s2.[l2-1] then
+  mat_longueur.(l1).(l2) <- 1 + plssc s1 s2 (l1-1) (l2-1) mat_longueur
+  else let longueur1 = plssc s1 s2 (l1-1) (l2) mat_longueur in
+    let longueur1 = plssc s1 s2 l1 (l2-1) mat_longueur in
+    (mat_longueur.(l1).(l2) <- max longueur1 longueur2));
+  mat_longueur.(l1).(l2) ;;
