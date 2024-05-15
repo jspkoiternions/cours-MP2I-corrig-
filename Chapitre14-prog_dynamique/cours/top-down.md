@@ -52,3 +52,4 @@ else
     let longueur1 = plssc s1 s2 l1 (l2-1) mat_longueur in
     (mat_longueur.(l1).(l2) <- max longueur1 longueur2));
   mat_longueur.(l1).(l2) ;;
+```
