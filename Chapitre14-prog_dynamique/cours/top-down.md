@@ -1,3 +1,5 @@
+# Méthode : Top-down
+
 On a déjà vu fibo naive
 ```ocaml
 let rec fibo_naf n =
@@ -19,6 +21,8 @@ fonction :
 - prend en entrée un argument et une structure mutable
 - renvoie la solution attendue ET la stocke dans le structure  pour être réutilisée dans les appels récursifs
 
+### Exemples :
+
 ```ocaml
 let rec fibo_top_down_aux n t = 
   (if n <= 1 then t.(n) <- n 
@@ -33,5 +37,3 @@ let fibo_top_down n = fibo_top_down_aux n (Array.make(n+1) 0);;
 ```
 
 on appel cela la mémoïsation le fait de se rappeler des résultats déja calculés
-
-
