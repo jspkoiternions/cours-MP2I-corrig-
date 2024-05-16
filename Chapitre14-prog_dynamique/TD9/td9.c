@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 
 struct result{int *t;int size;};
 typedef struct result result;
@@ -46,10 +47,32 @@ result monnaie_monnaie_dynamique(int n, int p[n], int x){
   }
   for (int k = 1; k<=x;k++){
     if(k-p[0] >= 0){
-      s[0][k]=1;
+      s[0][k]=s[0][k-p[0]];
+      if(s[0][k]<INT_MAX){
+        s[0][k]++;
+      }
     }
     else{
       s[0][k] = INT_MAX;
+    }
+  }
+  for (int i = 1 ; i<n;i++){
+    for (int k = 1; k <= x; k++){
+      if (k-p[i] < 0){
+        s[i][k] = s[i-1][k]
+      }
+      else{
+        int a = s[i][k-p[i]]+1;
+        int b = s[i-1][k];
+        //soit notre rendu de monnai est remplis avec la i+1ieme piece 
+        //sinon se sera en utilisant les i 1ere pièce
+        if (a<b){
+          s[i][k] = a;
+        }
+        else{
+          s[i][k] = b;
+        }
+      }
     }
   }
 }
