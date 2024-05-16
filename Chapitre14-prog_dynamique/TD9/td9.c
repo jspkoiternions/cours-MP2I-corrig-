@@ -37,6 +37,22 @@ void detruire_matrice(int **p,int n, int m){
   free(p);
 }
 
+//on redef ici result ne fait plus la même longueur que celui de nombre de pièce 
+)
+result monnaie_monnaie_dynamique(int n, int p[n], int x){
+  int **s = creer_matrice(n,x+1);
+  for (int i = 0;i < n; i++){
+    s[i][0] = 0;
+  }
+  for (int k = 1; k<=x;k++){
+    if(k-p[0] >= 0){
+      s[0][k]=1;
+    }
+    else{
+      s[0][k] = INT_MAX;
+    }
+  }
+}
 
 int main(){
 
