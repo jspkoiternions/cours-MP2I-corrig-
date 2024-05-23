@@ -53,3 +53,23 @@ else
     (mat_longueur.(l1).(l2) <- max longueur1 longueur2));
   mat_longueur.(l1).(l2) ;;
 ```
+
+
+## méthode pour rédiger le top down :
+fct qui prend en entrée une valeur et une structure et modifie la structure en ajoutant les différentes solutions par appels récurssifs les appels ne sont fait que si la sol n'a pas déjà été calculé.
+
+En ocaml on fait une fct et def la fct rec à l'intérieur, on def la struct dans la fct principal 
+ex : 
+```ocaml
+let fibo n =
+  let t = Array.make (n+1) (-1) in
+  let rec fibo_aux n =
+  if t.(n) = -1 then 
+    begin
+    if n <= 1 then 
+      t.(n) <- n ;
+      else t.(n) <- fibo_aux(n-1) + fibo_aux(n-2);
+    end;
+    t.(n);
+    in fibo_aux n;;
+```
